@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* odsazení pro pevnou hlavičku při skoku na kotvu */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-sand-50 text-charcoal-900 antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold tracking-tight text-charcoal-900;
+    text-wrap: balance;
+  }
+
+  /* Viditelné focus stavy pro klávesnici */
+  :focus-visible {
+    @apply outline-none ring-2 ring-olive-500 ring-offset-2 ring-offset-white;
+  }
+
+  /* Respektování preferencí sníženého pohybu */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-olive-700;
+  }
+
+  /* Jemné industriální linkování v tmavých sekcích */
+  .bg-industrial {
+    background-color: theme('colors.charcoal.900');
+    background-image: theme('backgroundImage.grid-lines');
+    background-size: 44px 44px;
+  }
+}
