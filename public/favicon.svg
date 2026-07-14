@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="10" fill="#161917"/>
-  <rect x="6" y="6" width="52" height="52" rx="7" fill="none" stroke="#7f8c3b" stroke-width="2"/>
-  <text x="32" y="43" font-family="Arial, sans-serif" font-size="30" font-weight="700"
-        text-anchor="middle" fill="#ffffff">T<tspan fill="#9da957">3</tspan></text>
+  <clipPath id="r"><rect x="0" y="0" width="64" height="64" rx="10"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect x="0" y="0" width="32" height="64" fill="#5a7212"/>
+    <rect x="32" y="0" width="32" height="64" fill="#333333"/>
+    <text x="16" y="34" font-family="Arial, sans-serif" font-size="42" font-weight="800"
+          text-anchor="middle" dominant-baseline="central" fill="#ffffff">T</text>
+    <text x="48" y="34" font-family="Arial, sans-serif" font-size="42" font-weight="800"
+          text-anchor="middle" dominant-baseline="central" fill="#ffffff">3</text>
+  </g>
 </svg>
